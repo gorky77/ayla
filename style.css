@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+
+.hero {
+    height: 100vh;
+    background-image: url('project4.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero-button {
+    background-color: #ffcc00;
+    color: black;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.services, .projects, .about, .contact {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.service-box, .project-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.service-item, .project-gallery img {
+    width: 30%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('project4.jpg'); /* Resmi arka plana ekliyoruz */
+    background-size: cover; /* Resmi ekran boyutuna göre kaplama yapar */
+    background-position: center; /* Resmi ortalar */
+    background-attachment: fixed; /* Arka plan resmi sayfayı kaydırırken sabit kalır */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out; /* Dinamik geçiş efekti */
+}
+
+.navbar a:hover {
+    color: #ffcc00; /* Hover sırasında renk değişimi */
+}
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards; /* Fade in animasyonu */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Yukarıdan görünür hale gelsin */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero-button {
+    background-color: #ffcc00;
+    color: black;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.hero-button:hover {
+    background-color: #333; /* Hover sırasında arka plan rengi değişimi */
+    color: white;
+    transform: scale(1.1); /* Hover sırasında buton biraz büyüsün */
+}
+.navbar a {
+    position: relative;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+    width: 100%; /* Hover sırasında alt çizgi genişlesin */
+}
+/* About section için stil */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.about-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    width: 60%;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.about-image {
+    width: 35%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Resim üzerine gelindiğinde büyütme efekti */
+}
+
+/* Responsive düzen için */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+}
+
+.about-content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.about-appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Contact section için stil */
+.contact-section {
+    background-color: #333; /* Sitenin genel temasına uygun koyu arka plan */
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    color: #ffcc00; /* Vurgu rengi */
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ddd;
+}
+
+/* Form stili */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form input {
+    background-color: #444;
+    color: white;
+}
+
+.contact-form textarea {
+    background-color: #444;
+    color: white;
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+/* Form mesajı stili */
+#form-message {
+    margin-top: 1rem;
+    color: #ffcc00;
+    font-size: 1.2rem;
+}
+/* Reach Us Section için stil */
+.reach-section {
+    background-color: #2c2c2c; /* Daha koyu bir arka plan */
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    background-image: url('city-bg.jpg'); /* Bir şehir resmi ekledim (senin seçtiğin bir resimle değiştirebilirsin) */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.reach-section h1 {
+    font-size: 2.5rem;
+    color: #ffcc00; /* Başlığı daha dikkat çekici yapalım */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Gölge efekti ile daha belirgin */
+}
+
+.reach-section p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover sırasında metinler vurgulansın */
+.reach-section p:hover {
+    color: #ffcc00; /* Üzerine gelindiğinde sarı renk olsun */
+}
+
+/* Section giriş animasyonu */
+.reach-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reach-section.reach-appear {
+    opacity: 1;
+    transform: translateY(0);
+}
